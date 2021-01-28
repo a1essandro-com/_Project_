@@ -6,13 +6,16 @@
                 <div class="text2" [style]="text2_style">{{text2}}</div><br>
                 <div class="text3" [style]="text3_style">{{text3}}</div><br>
                 <style>
-                    .text1, .text2, .text3{
+                    .text1,
+                    .text2,
+                    .text3 {
                         margin-left: 40px;
                         margin-top: 15px;
                         font-size: 25px;
                         font-weight: bold;
                     }
-                    .text1{
+
+                    .text1 {
                         margin-top: 30px;
                     }
                 </style>
@@ -32,17 +35,37 @@
             </div>
             <div class="pick_back">
                 <h4>Фоновое изображение:</h4>
-                Добавьте ссылку: <input type="text" [(ngModel)]="user_background"><button  (click)="delete_background()" id="delete_back">Убрать</button><br>
+                <label for="">Добавьте ссылку:</label>
+                <input type="text" [(ngModel)]="user_background"><button (click)="delete_background()"
+                    id="delete_back" style="font-size: 20px;">Убрать</button><br>
                 <button (click)="set_background()" id="background_button">Добавить</button><br>
             </div>
             <div class="text">
                 <h4>Текстовые поля:</h4>
-                <div class="input1">Текстовое поле №1 <input type="text" [(ngModel)]='text1'><br>
-                Размер текста<input type="text" [(ngModel)]='font_size1' class="font_input"><br></div>
-                <div class="input2">Текстовое поле №2 <input type="text" [(ngModel)]='text2'><br>
-                Размер текста <input type="text" [(ngModel)]='font_size2' class="font_input"><br></div>
-                <div class="input3">Текстовое поле №3 <input type="text" [(ngModel)]='text3'><br> 
-                Размер текста <input type="text" [(ngModel)]='font_size3' class="font_input"><br></div>
+                <div class="input1">
+                    <label for="">Текстовое поле №1</label>
+                    <input type="text" [(ngModel)]='text1'>
+                    <br>
+                    <label for="">Размер текста</label>
+                    <input type="text" [(ngModel)]='font_size1' class="font_input">
+                    <br>
+                </div>
+                <div class="input2">
+                    <label for="">Текстовое поле №2</label>
+                    <input type="text" [(ngModel)]='text2'>
+                    <br>
+                    <label for="">Размер текста</label>
+                    <input type="text" [(ngModel)]='font_size2' class="font_input">
+                    <br>
+                </div>
+                <div class="input3">
+                    <label for="">Текстовое поле №3</label>
+                    <input type="text" [(ngModel)]='text3'>
+                    <br>
+                    <label for="">Размер текста</label>
+                    <input type="text" [(ngModel)]='font_size3' class="font_input">
+                    <br>
+                </div>
             </div>
             <div class="pick_color">
                 <h4>Цвет текста:</h4>
@@ -61,4 +84,3 @@
         </div>
     </div>
 </div>
-
