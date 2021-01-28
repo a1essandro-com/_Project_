@@ -1,0 +1,22 @@
+#main{
+    display: grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1.4fr 1fr;
+    grid-column-gap: 15px
+}
+#left_side{
+    grid-column:1;
+}
+#right_side{
+    grid-column:2;
+}
+#right_side iframe{
+    width: 530px;
+    height: 380px;
+    margin-top: 40px;
+}
+p{
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 50px;
+}

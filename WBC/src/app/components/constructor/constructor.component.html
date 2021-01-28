@@ -1,0 +1,64 @@
+<div id="main">
+    <div class="right_side">
+        <div class="constructor">
+            <div class="working_area" [style]="div_style">
+                <div class="text1" [style]="text1_style">{{text1}}</div><br>
+                <div class="text2" [style]="text2_style">{{text2}}</div><br>
+                <div class="text3" [style]="text3_style">{{text3}}</div><br>
+                <style>
+                    .text1, .text2, .text3{
+                        margin-left: 40px;
+                        margin-top: 15px;
+                        font-size: 25px;
+                        font-weight: bold;
+                    }
+                    .text1{
+                        margin-top: 30px;
+                    }
+                </style>
+            </div>
+        </div>
+        <button id="main_button"><a routerLink='/order'>Оформить заказ</a></button>
+    </div>
+    <div class="left_side">
+        <div class="menu">
+            <div class="pick_size">
+                <h4>Выберите форму визитки:</h4>
+                <button (click)="usual_size()" class="size_button">Обычная</button>
+                <button (click)="vertical_size()" class="size_button">Вертикальная</button>
+                <button (click)="square_size()" class="size_button">Квадрат</button><br>
+                <button (click)="elongate_size()" class="size_button">Удлиненная</button>
+                <button (click)="big_size()" class="size_button">Увеличенная</button>
+            </div>
+            <div class="pick_back">
+                <h4>Фоновое изображение:</h4>
+                Добавьте ссылку: <input type="text" [(ngModel)]="user_background"><button  (click)="delete_background()" id="delete_back">Убрать</button><br>
+                <button (click)="set_background()" id="background_button">Добавить</button><br>
+            </div>
+            <div class="text">
+                <h4>Текстовые поля:</h4>
+                <div class="input1">Текстовое поле №1 <input type="text" [(ngModel)]='text1'><br>
+                Размер текста<input type="text" [(ngModel)]='font_size1' class="font_input"><br></div>
+                <div class="input2">Текстовое поле №2 <input type="text" [(ngModel)]='text2'><br>
+                Размер текста <input type="text" [(ngModel)]='font_size2' class="font_input"><br></div>
+                <div class="input3">Текстовое поле №3 <input type="text" [(ngModel)]='text3'><br> 
+                Размер текста <input type="text" [(ngModel)]='font_size3' class="font_input"><br></div>
+            </div>
+            <div class="pick_color">
+                <h4>Цвет текста:</h4>
+                <button id="color_button1" (click)="white()"></button>
+                <button id="color_button2" (click)="black()"></button>
+                <button id="color_button3" (click)="blue()"></button>
+                <button id="color_button4" (click)="purple()"></button>
+                <button id="color_button5" (click)="yellow()"></button>
+                <button id="color_button6" (click)="orange()"></button>
+                <button id="color_button7" (click)="red()"></button>
+                <button id="color_button8" (click)="green()"></button>
+                <button id="color_button9" (click)="dark_green()"></button>
+                <button id="color_button10" (click)="brown()"></button>
+            </div>
+            <button (click)="set_text_argument()" id="set_input_button">Применить</button><br>
+        </div>
+    </div>
+</div>
+

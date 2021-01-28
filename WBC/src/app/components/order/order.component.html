@@ -1,0 +1,26 @@
+<div id="main">
+    Фамилия: <input type="text" required><br>
+    Имя: <input type="text"required><br>
+    Отчество: <input type="text"required><br>
+    Телефон: <input type="tel"required><br>
+    Адрес: <input type="text"required placeholder="в свободном формате"><br>
+    Кол-во визиток: {{amount}}
+    <button (click)="amountpl()">+</button><button (click)="amountmin()">-</button><br>
+    Выберите тип бумаги:<br>
+    <div class="type">
+        <input name="type" type="radio" value="nothing" (click)="setType('nothing')">Нет ламинации<br>
+        <input name="type" type="radio" value="gloss" (click)="setType('gloss')">Глянцевая ламинация<br>
+        <input name="type" type="radio" value="matte" (click)="setType('matte')">Матовая ламинация<br>
+        <input name="type" type="radio" value="softtauch" (click)="setType('softtouch')">Ламинация SOFT TOUCH<br>
+    </div>
+    Цена визиток: {{cards_price}}<br>
+    Цена доставки: {{delivery_price}}<br>
+    Общая цена: {{price}}
+</div>
+<div class="order_button">
+    <button><a routerLink='/order-complete'>Заказать</a></button>
+</div>
+<p id="info">
+    *После оформления заказа наш менеджер свяжется с вами для подтверждения.<br>
+    **Также рекомендуем ознакомиться в <a routerLink='/delivery'>условиями доставки</a>
+</p>

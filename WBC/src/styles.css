@@ -1,0 +1,12 @@
+html{
+	background-image: url(app/pictures/back.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+	font-family:Open Sans, sans-serif;
+	font-size: 25px;
+	color: white;
+}
+body {
+	margin:0;
+}
+
